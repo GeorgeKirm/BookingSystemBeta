@@ -1,0 +1,4 @@
+User password U
+Test pass A
+Admin password A
+Random test A

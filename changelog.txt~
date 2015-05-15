@@ -1,0 +1,175 @@
+//Den xreiazete na to diabasete.. einai ena perito arxeio pou me boithouse sthn epe3ergasia tou programmatos
+
+
+v1.03
+-Users: eftia3a JOptionPane emfanizei ta lathei (bolebei na xrisimopoioume auto mono sta 
+lathoi
+-Users: Prosthesa merika Javadoc
+-GUItesting: Eftia3a ena close button kai to pannel gia to log in
+-Project: diegrapsa tin main class.. ama patiseis to prasino belos
+tha se zitisei na diale3eis main (diale3e thn GUItesting)
+
+v1.04 Beta
+-Project: diegrapsa thn GUI kai metanomasa thn GUItesting se GUI
+-Project: Sundesh ths GUI me thn Users meso ths logIn
+-Users: userMap private->public (isos na min xriazete public)
+-Users: sto userMap prostethikan 2 xristes (User kai Admin ws onomata
+me kodiko password)
+-Note: menei na ftia3oume methodous gia na apothikebonte ta arxia ston
+skliro
+-Note2: sthn log in xriazete na ftia3oume to koumpi register kai na ftia3oume grafiko 
+peribalon otan kanei log in
+
+v1.04
+-GUI: Aferesa to koumpi "register" apo to "logIn" panel kai to koumpi
+"close" apo to arxiko panel
+-GUI: To koumpi "close" apo to "logIn" panel to onomasa "cansel" kai
+tora se pigenei sto proto panel
+-GUI: Sto actionListener tou "logIn" diegrapsa merikes perites metablites
+-GUI: diegrapsa kai mia sunartish canselEvent tou log in button pou den xreiazotan
+-GUI: *Bug fixed N* Sto actionListener tou "logIn" diorthosa merika lathoi pou eixan 
+dimiourgithei (sthn periptosh pou estelnes prota null anti gia onoma h' password den 
+mporouses meta na sindetheis sto kanoniko account)
+
+v1.05.1 Beta
+-Users: h methodos "logIn" pleon mporei na diabasei dedomena apo to file "UserMap.txt" 
+kai na parei dedomena apo ekei
+-Users: oi methodoi "registerAdmins" kai "registerUsers" eginan ena ("registerNewUser")
+-Users: h methodos "registerNewUser" pleon grafei to hashmap sto arxeio "UserMap.txt"
+-Users: allagh sthn methodo leitourgias tou hashmap (tora anti gia <"UName","password"> 
+apothikeuonte ws <"Name","password U" gia tous
+Users kai antistixa me A gia tous Admins)
+-GUI: "Cansel" button renamed "Cancel"
+-Testing pass: stis etimes pleon klaseis "registerNewUser" kai "logIn" tis 
+klashs "Users"
+-Testing failed: sthn methodo changePassword tis klashs "Users"
+-Users: *New Bug (No1)* h methodos changePassword den leitourgei.
+-Users: *New Bug (No2)* ta cName kai cPassword exoun lathos logiki apo auti 
+pou eixame upologisei
+
+v1.05.2 Beta
+-Project: *Bug fixed (No2)* New class "Account", auth exei os global veriables 
+ta cName, cPassword kai cRights
+-Users: Allages se oles tis methodos gia na apothikeuoun sta global veriables 
+ton sundedemeno xristh
+-Users: *Bug fixed (No1)* changePassword leitourgei kanonika
+-Users: Diamorfosh methodou "registerNewUser" gia thn periptosh pou o xristeis 
+thelei na kanei register ws admin
+-Users: *new Bug (No3)* sth methodos "registerNewUser" h periptosh tou admin 
+sthn ousia den exei teleiosei akoma
+-Note: malon tha 3anaala3oume to hashmap se <string, string[]>, sto string[0] 
+tha exoume password kai sto string[1] tha exoume U/A
+
+v1.05.3 Beta -Unstable-
+-Users: ulopoihsh tou <string,string[]>
+-Account: ta String cPassword kai cRights eginan String[] cPasswordAndRights
+-Users: prosthesh mias adias pros to paron methodou "deleteAccount"
+-Users: *new Bug (No4)* (~~To programma den trexei~~) problima malon me ton 
+neo tropo apothikeushs (sthn arxh mou etrexe sosta.. meta ebgale ena mikro 
+lathos sta rights kai tora den trexei katholou)
+-Note: *Reminder of Bug (No3)* "sth methodos "registerNewUser" h periptosh 
+tou admin sthn ousia den exei teleiosei akoma"
+
+v1.05.4 Beta
+-Users: *Bug fixed (No4)* upeirxe telika problima sto arxeio "UserMap.txt"
+ (eixe ena space parapanw sto telos tou arxeiou)
+-Users: *Reminder of Bug (No3)* "sth methodos "registerNewUser" h 
+periptosh tou admin sthn ousia den exei teleiosei akoma"
+malon tha prepei na broume allo tropo gia na kanei register o Admin
+-Users: *new Bug (No5)* to neo systima me to userMap den leitourgei
+oles oi klaseis parousiazoun problima kai dinoun lathos dedomena
+
+v1.05.4
+-Project: GUI xorizete se GUIlogIn kai GUI
+-Users: *Bug fixed (No3)* h methodos "registerNewUser" epeita apo 
+testing leitourgei kanonika
+-Users: *Bug fixed (No5)* allagh tou systimatos apothikeushs
+tora anti gia userMap<string,String[]> egine <string,List<sting>>
+-Users: epeita apo testing oi methodoi gia log in, register kai change password leitourgoun kanonika 
+-GUI+GUIlogIn: epeita apo testing leitourgoun kanonika
+-GUIlogIn: prosthikh button "Quit" sto menu
+-Users: prosthikh methodou "logOut"
+-Users: ylopoihsh twn deleteAccount kai logOut
+
+v1.05.5
+-Project: dimiourgia 3 newn jFrame (GUIforUser, GUIforAdmin kai GUIforChangePassword)
+-GUIforUser: pros to paron exei delete account kai change password pliros ulopoiimena (den einai pliros ulopoiimeno)
+-GUIforAdmin: to idio me GUIforUser
+-GUIforChangePassword: allazei ton kodiko tou xristei (exei oloklirothei pliros)
+-jFrame+Users: mikro allages gia na fenonte pio orea
+-Project: geniko testing stis classeis kai methodous (pass!)
+-Project: h methodos "showMovie" metaferthike apo thn "Users" klash sthn "Event"
+
+v1.05.6
+-jFrames: ta "GUIforAdmin" kai "GUIforUSer" eginan ena ("GUIforUser")
+-GUIforUser: anadiamorosh ton koumpiwn. E3tra koumpia mono gia tous admin
+-Users: mikroallages gia na prosarmostei sto neo "GUIforUser" interface
+-Event: Ylopoihsh twn methodwn "showEvent" kai "editEvent"
+-GUIforUser: Allages sta actionLitener gia na prosarmostei sthn nea "Event" klash
+-Note: Prepei na broume tropo otan anoigei to GUIforChangePassword na min mporei o xrisths na xrisimopoihsei to GUIforUser
+-Note: Prepei na ulopoihthei h addEvent kai na epidiorthothoun ta jList
+
+v2.00.1
+-Project: GUIforLogIn->GUIforLogIn_Register
+-GUIforLogin_Register: completed
+-Users: completed exept from booking
+-GUI: completed
+-GUIforUsers: nearly completed (xriazete booking system kai apothikeush twn event ston hardDisk
+-Event: to idio me GUIforUsers
+-GUIforLogIn_Register: *Bug fixed* me ta focus listener
+-GUIforLogIn_Register: *Bug fixed* to log in panel ebgaze problima me to megethos kai otan prospathouses na kaneis log in me "space" mesa sta fields se ebgaze to panel gia to Register.. ftiaxtike tora
+-Users: *Bug fixed* sthn logIn methodo (ekana mikroallages ston kodika)
+
+v2.01.0 Beta -Unstable-
+-GUIforUser: *new Bug No1* compoLists otan edit events
+-Event: *new Bug No2* me ta performances
+-GUIforUser: *new Bug No3* editEvent thelei merika akoma if gia ta (-)
+-Project: otan lithoun auta ta bugs tha exoun minei mono ta booking system kai ta edit halls
+-Note: Nai men fenete oti auto to version prokalei perisotera bugs apo to proigoumeno alla einai sumantiko gia na akolouthisei to development tou epomenou version
+-Note: to programa exei tag "Unstable" e3etias tou bug me ta performance, ama den xrisimopoiithoun auta trexei to upolipo kanonika
+
+v2.01.0
+-GUIforUser: *Bug fixed No1* auta apenergopoiounte otan kaneis edit ena event
+-Event: *Bug fixed No2* ("me ta performances")
+-GUIforUser: *Bug fixed No3* den itan telika bug :P
+-Event: O kodikas stin methodo deleteEvent prepei na grafei kathe tenia me to katalilo noumero
+-GUIforUser: isos na xreiastei na alla3ei ligo o kodikas sthn periptosh pou diagrautoun ola ta events
+-Project: edit/add/show event completed. Apomenoun ta delete/book events
+
+v2.01.1
+-Project: prosthiki sxoliwn (ektos apo tis klaseis event kai GUIforUser (auta tha prostethoun otan ulopoihthei to delete event me epitixia))
+-Users: *Bug fixed* sthn methodo change password (den mporouses na alla3eis gia deuterh fora ton kodiko sou
+-Note: sthn Users klash stis methodous "changePassword" kai "deleteAccount" isos einai kalutero na min 3anagrafete olo to arxeio apo thn arxh alla mono na ginete update/diagrafete h seira
+-GUIforUser: *new Bug No1* uparxei problima me to delete event (enw kanei kala thn douleia tou bgazei error otan einai na 3anaprosthesei stixeia sto compobox
+-GUIforUser: otan patas ena event apo to list tora emfanizete amesos to event xoris na xreiastei na patas to seeEvent (auto tha diagraftei sto epomeno vertion)
+
+v2.02.0
+-GUIforUser: fall back sto v2.01.0 oson afora to delete
+-GUIforUser: delete methodos oloklirothike.
+-GUIforUser: teleiose. tis menei mono ta 2 koumpia "book" kai "edit hall"
+-GUIforUser: to edit hall se pigenei sto GUI_HallSeats
+-Note: xreiazonte "help" kai "about" ola ta interface ektos tou GUI.java
+-Project: GUI_HallSeats arxise na etimazete
+-Project: diorthosh tis onomasias tou paketou
+
+v2.02.1
+-Event: allagh tou hashmap eventMap se movieMap kai performanceMap
+-GUIforUser: sta jcompobox emfanizonte tora ta titles twn events
+-Event: prosarmogh tou kodika sta nea dedomena
+-GUIforUser: prosarmogh tou kodika sta nea dedomena
+-GUI_HallSeats: metanomasia se GUIforHalls. prosthikh merikwn periferiakwn koumpiwn
+-Note: xreiazonte "help" kai "about" ola ta interface ektos tou GUI.java kai ananewsh autwn sto teleuteo
+
+v2.03.0
+-project: mikroallages
+
+v2.03.2
+-project: Polles megales allages teleuteas hmeras.. dustixws eutase to deadline
+
+
+
+
+
+
+
+
